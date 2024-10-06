@@ -10,7 +10,7 @@ Si está el voltaje muy desviado puedes regular con el potenciometro que trae ma
 
 Otra opción es hacer la calibracion mediante software que es la que me ha tocado hacer a mi ya que mi valor en voltaje es muy alto, desconozco la razón no se si es por el sensor que se ha llevado un tiempo sin utilizar.
 Vamos a calibrar mediante codigo:
-![imagen](https://github.com/user-attachments/assets/797cafac-afa5-4a4f-aa3f-74764dc6f807)
+1.![imagen](https://github.com/user-attachments/assets/797cafac-afa5-4a4f-aa3f-74764dc6f807)
 
 Aqui como veis estos valores han sido todo modificados, para ello solo tenemos que fijarnos en el Monitor Serie que valor nos dá con una solucion de PH 7 como por ejemplo el agua del grifo
 ![imagen](https://github.com/user-attachments/assets/e76e7c97-9eb5-4d30-b123-7d3e08ba9f55)
@@ -33,6 +33,35 @@ ENTERPH saldrá un mensaje "Enter PH Calibration Mode" "Please put the probe int
                 }
                 Serial.print(F(">>>Calibration Successful"));
 ```
+
+Las variables PH_8_VOLTAGE y PH_5_Voltage hacen referencia al voltaje modificado en el apartado anterior  ( 1 ), entonces indica si el voltaje actual es mayor al valor que hayamos puesto en la variable PH_8_VOLTAGE y ademas inferior al valor que hemos puesto en PH_5_VOLTAGE  obetenemos una calibración valida para PH 7  :D .
+
+Por ultimo ejecutamos CALPH nos indicara que ha sido satisfactorio, y volvemos a insertar el comando EXITPH para guardar el valor de calibración.
+
+Para la calibración de PH 4 es muy similar tenemos un entonces si lo anterior no es valido, y el voltaje que obtenemos es mayor al valor de tension que hemos metido en la variable PH_5_VOLTAGE y ademas es inferior al valor insertado en la variable  PH_3_VOLTAGE ese valor se convierte en PH 4, Los pasos desde un principio seria:
+1.ENTERPH en monitor serie ( Entramos en modo calibración)
+2.CALPH ( ya con la sonda de ph insertada en el patron 4 de la solucion).
+3.EXITPH en el monitor serie ( para guardar la calibración)  
+Ya tendriamos un slope de 4 a 7 de PH bien calibrado :D.
+
+
+
+```ruby
+                else if ((this->_voltage > PH_5_VOLTAGE) && (this->_voltage < PH_3_VOLTAGE))
+                {
+                    EEPROM.writeFloat(PHVALUEADDR + sizeof(float), this->_acidVoltage);
+                    EEPROM.commit();
+                }
+                Serial.print(F(">>>Calibration Successful"));
+
+
+```
+
+
+¿Como conectarlo a home assistant?
+
+En construccion.....
+
 
 
 
