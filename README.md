@@ -15,7 +15,7 @@ Vamos a calibrar mediante codigo:
 Aqui como veis estos valores han sido todo modificados, para ello solo tenemos que fijarnos en el Monitor Serie que valor nos dá con una solucion de PH 7 como por ejemplo el agua del grifo
 ![imagen](https://github.com/user-attachments/assets/e76e7c97-9eb5-4d30-b123-7d3e08ba9f55).
 
-Sabiendo que voltaje obtenemos con agua del grifo ahora nos toca modificar el codigo siguiente para que acepte la calibración:
+Sabiendo qué voltaje obtenemos con agua del grifo ahora nos toca modificar el codigo siguiente para que acepte la calibración:
 En mi caso tambien use una solucion de PH 4 para realizar el "slope" (pendiente de linealidad del sensor)  correcto:
 Una vez que tengamos los valores del voltaje con cada solucion lo insertamos , y ahora si que nos ponemos a calibrarlo, en la barra de comandos del monitor serie escribimos:
 ENTERPH saldrá un mensaje "Enter PH Calibration Mode" "Please put the probe into the 4.0 or 7.0 standard buffer solution<<<" y aquí es donde está el "truco", Debemos de hacerle creer mediante software que ese valor es el que corresponde al PH 7 por ejemplo entonces en la siguiente parte del codigo modificamos:
