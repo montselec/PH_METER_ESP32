@@ -10,13 +10,29 @@ Si está el voltaje muy desviado puedes regular con el potenciometro que trae ma
 
 Otra opción es hacer la calibracion mediante software que es la que me ha tocado hacer a mi ya que mi valor en voltaje es muy alto, desconozco la razón no se si es por el sensor que se ha llevado un tiempo sin utilizar.
 Vamos a calibrar mediante codigo:
-![imagen](https://github.com/user-attachments/assets/b908a6ae-48db-4e40-a97f-1dc31d5ebd8e)
+![imagen](https://github.com/user-attachments/assets/797cafac-afa5-4a4f-aa3f-74764dc6f807)
 
 Aqui como veis estos valores han sido todo modificados, para ello solo tenemos que fijarnos en el Monitor Serie que valor nos dá con una solucion de PH 7 como por ejemplo el agua del grifo
 ![imagen](https://github.com/user-attachments/assets/e76e7c97-9eb5-4d30-b123-7d3e08ba9f55)
 Sabiendo que voltaje obtenemos con agua del grifo ahora nos toca modificar el codigo siguiente para que acepte la calibración:
 En mi caso tambien use una solucion de PH 4 para realizar el "slope" (pendiente de linealidad del sensor)  correcto:
-![imagen](https://github.com/user-attachments/assets/797cafac-afa5-4a4f-aa3f-74764dc6f807)
+Una vez que tengamos los valores del voltaje con cada solucion lo insertamos , y ahora si que nos ponemos a calibrarlo, en la barra de comandos del monitor serie escribimos:
+ENTERPH saldrá un mensaje "Enter PH Calibration Mode" "Please put the probe into the 4.0 or 7.0 standard buffer solution<<<" y aquí es donde está el "truco", Debemos de hacerle creer mediante software que ese valor es el que corresponde al PH 7 por ejemplo entonces en la siguiente parte del codigo modificamos:
+```ruby
+ if (phCalibrationFinish)
+            {
+                if ((this->_voltage > PH_8_VOLTAGE) && (this->_voltage < PH_5_VOLTAGE))
+                {
+                    EEPROM.writeFloat(PHVALUEADDR, this->_neutralVoltage);
+                    EEPROM.commit();
+                }
+                else if ((this->_voltage > PH_5_VOLTAGE) && (this->_voltage < PH_3_VOLTAGE))
+                {
+                    EEPROM.writeFloat(PHVALUEADDR + sizeof(float), this->_acidVoltage);
+                    EEPROM.commit();
+                }
+                Serial.print(F(">>>Calibration Successful"));
+```
 
 
 
