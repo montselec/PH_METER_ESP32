@@ -13,7 +13,10 @@ Vamos a calibrar mediante codigo:
 ![imagen](https://github.com/user-attachments/assets/b908a6ae-48db-4e40-a97f-1dc31d5ebd8e)
 
 Aqui como veis estos valores han sido todo modificados, para ello solo tenemos que fijarnos en el Monitor Serie que valor nos dá con una solucion de PH 7 como por ejemplo el agua del grifo
-![imagen](https://github.com/user-attachments/assets/1526592a-5eba-4f17-87db-1c60242efa13)
+![imagen](https://github.com/user-attachments/assets/e76e7c97-9eb5-4d30-b123-7d3e08ba9f55)
+Sabiendo que voltaje obtenemos con agua del grifo ahora nos toca modificar el codigo siguiente para que acepte la calibración:
+En mi caso tambien use una solucion de PH 4 para realizar el "slope" (pendiente de linealidad del sensor)  correcto:
+![imagen](https://github.com/user-attachments/assets/797cafac-afa5-4a4f-aa3f-74764dc6f807)
 
 
 
