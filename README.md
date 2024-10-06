@@ -1,6 +1,17 @@
 Hola bienvenidos PLCTermineitors! Os dejo el tutorial el cual se describe como calibrar con la ayuda del gran greenponik el cual he modificado unos valores en su codigo para poder calibrar mi sensor de PH, os dejo conexionado,
 programa de Arduino, y lo proximo que realizaré es enlace al sistema domótico home assistant.
 
+##CALIBRACION##
+Fisicamente hay que cortocircuitar el conector BNC conectando un hilo en el orificio central y otro a la carcasa del conector, ahora con un multimetro medimos en paralelo entre , PO y GND de la placa del ESP32, debe de marcar 2,5V que esto equivale a un PH de 7 neutro.
+Adjuntar fotografia:
+
+
+Si está el voltaje muy desviado puedes regular con el potenciometro que trae mas cercano al conector BNC ese voltaje.
+
+Otra opción es hacer la calibracion mediante software que es la que me ha tocado hacer a mi ya que mi valor en voltaje es muy alto, desconozco la razón no se si es por el sensor que se ha llevado un tiempo sin utilizar.
+Vamos a calibrar mediante codigo:
+![imagen](https://github.com/user-attachments/assets/b908a6ae-48db-4e40-a97f-1dc31d5ebd8e)
+
 
 
 
