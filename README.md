@@ -4,6 +4,9 @@ programa de Arduino, y lo proximo que realizaré es enlace al sistema domótico 
 ##CALIBRACION##
 Fisicamente hay que cortocircuitar el conector BNC conectando un hilo en el orificio central y otro a la carcasa del conector, ahora con un multimetro medimos en paralelo entre , PO y GND de la placa del ESP32, debe de marcar 2,5V que esto equivale a un PH de 7 neutro.
 Adjuntar fotografia:
+![how-to-calibrate-the-ph-sensor-1280x694](https://github.com/user-attachments/assets/3d3e82d8-a3f2-4a93-a8bc-66b94df1f9fe)
+Gracias a elecroclinic por su post y explicaciones.
+https://www.electroniclinic.com
 
 
 Si está el voltaje muy desviado puedes regular con el potenciometro que trae mas cercano al conector BNC ese voltaje.
