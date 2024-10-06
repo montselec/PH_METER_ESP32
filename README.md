@@ -5,6 +5,10 @@ programa de Arduino, y lo proximo que realizaré es enlace al sistema domótico 
 
 
 
-
+CREDITOS
 Post original y al que muestro un gran agradecimiento:
 https://github.com/greenponik/DFRobot_ESP_PH_BY_GREENPONIK
+
+Y a su vez a su autor oficial 
+Written by Mickael Lehoux from @greenponik
+Based on written by Jiawei Zhang(Welcome to our website)
