@@ -72,7 +72,8 @@ En construccion.....
 ####CREDITOS#####
 Post original y al que muestro un gran agradecimiento:
 https://github.com/greenponik/DFRobot_ESP_PH_BY_GREENPONIK
-
+Creditos a electroclinic por su enorme contribucion y explicacion de paso a paso de su sensor de PH:
+https://www.electroniclinic.com/ph-meter-arduino-ph-meter-calibration-diymore-ph-sensor-arduino-code/
 Y a su vez a su autor oficial 
 Written by Mickael Lehoux from @greenponik
 Based on written by Jiawei Zhang(Welcome to our website)
