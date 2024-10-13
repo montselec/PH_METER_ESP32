@@ -33,7 +33,8 @@ POT2 – AJUSTE DE ALARMA SALIDA DO DIGITAL.
 
 
 
-##CALIBRACION##
+#CALIBRACION#
+
 Fisicamente hay que cortocircuitar el conector BNC conectando un hilo en el orificio central y otro a la carcasa del conector, ahora con un multimetro medimos en paralelo entre , PO y GND de la placa del ESP32, debe de marcar 2,5V que esto equivale a un PH de 7 neutro.
 Adjuntar fotografia:
 ![how-to-calibrate-the-ph-sensor-1280x694](https://github.com/user-attachments/assets/3d3e82d8-a3f2-4a93-a8bc-66b94df1f9fe)
@@ -103,6 +104,7 @@ Para conectarlo a HomeAssistant, tenemos que tener las siguientes librerias inst
 
 
 #CREDITOS#
+
 Post original y al que muestro un gran agradecimiento:
 https://github.com/greenponik/DFRobot_ESP_PH_BY_GREENPONIK
 Creditos a electroclinic por su enorme contribucion y explicacion de paso a paso de su sensor de PH:
