@@ -4,6 +4,16 @@ programa de Arduino, y lo proximo que realizaré es enlace al sistema domótico 
 # ESQUEMA ELECTRICO #
 Como veis es bastante facil realizar el conexionado electrico para esta aplicacion:
 Segun el fabricante del sensor de PH dejo una descripcion de cada punto:
+TO – SALIDA DE TEMPERATURA
+DO – LIMITE DE LA SALIDA ALARMA A > 3.3V
+PO – SALIDA ANALOGICA DE PH
+GND – MASA PARA SEÑAL DE PH 
+GND – MASA DE LA PLACA
+VCC – 5V DC
+POT1 – CALIBRACION DE LA SALIDA ANALOGICA DE PH (EL MAS CERCANO AL CONECTOR BNC)
+POT2 – AJUSTE DE ALARMA SALIDA DO DIGITAL.
+
+
 ![imagen](https://github.com/user-attachments/assets/f158ccf5-a537-42e4-8772-57b30aa3b0da)
 
 
