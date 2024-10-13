@@ -94,14 +94,15 @@ Ya tendriamos un slope de 4 a 7 de PH bien calibrado :D.
 ```
 
 
-¿Como conectarlo a home assistant?
+#¿Como conectarlo a home assistant?#
 
-En construccion.....
-
-
+Para conectarlo a HomeAssistant, tenemos que tener las siguientes librerias instaladas en Arduino, en el código que dejo tenéis perfectamente todas las que son necesarias:
 
 
-####CREDITOS#####
+
+
+
+#CREDITOS#
 Post original y al que muestro un gran agradecimiento:
 https://github.com/greenponik/DFRobot_ESP_PH_BY_GREENPONIK
 Creditos a electroclinic por su enorme contribucion y explicacion de paso a paso de su sensor de PH:
